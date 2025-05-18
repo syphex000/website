@@ -1,52 +1,207 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Για τη Σηλια 💖</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: #ffe6f0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #fff5f5, #ffe6f0, #ffd6e7);
+      font-family: 'Montserrat', sans-serif;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       min-height: 100vh;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .flower {
+      position: absolute;
+      font-size: 24px;
+      opacity: 0.7;
+      animation: float 6s infinite ease-in-out;
+      z-index: 0;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(10deg); }
+    }
+
+    .container {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+      text-align: center;
+      max-width: 600px;
+      position: relative;
+      z-index: 1;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
     }
 
     h1 {
-      color: #ff69b4;
+      color: #ff1493;
       text-align: center;
-      margin-top: 20px;
-      font-size: 2.5rem;
+      margin: 0 0 30px 0;
+      font-size: 3rem;
+      font-family: 'Dancing Script', cursive;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    h1::after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(to right, #ff69b4, #ffb6c1, #ff69b4);
+      margin: 15px auto;
+      border-radius: 3px;
     }
 
     a.button {
       text-decoration: none;
-      padding: 15px 30px;
+      padding: 15px 40px;
       font-size: 1.2rem;
-      background-color: #ff99cc;
-      border-radius: 12px;
+      background: linear-gradient(45deg, #ff66b2, #ff99cc);
+      border-radius: 50px;
       color: white;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 15px rgba(255, 105, 180, 0.4);
       margin: 20px;
-      transition: background-color 0.3s ease;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      font-weight: 600;
+      letter-spacing: 1px;
+      z-index: 1;
     }
 
     a.button:hover {
-      background-color: #ff66b2;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 105, 180, 0.6);
+    }
+
+    a.button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(45deg, #ff99cc, #ff66b2);
+      z-index: -1;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    a.button:hover::before {
+      opacity: 1;
+    }
+
+    .heart {
+      position: absolute;
+      pointer-events: none;
+      animation: fall 4s linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10vh) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .message {
+      font-size: 1.1rem;
+      color: #666;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .photo-frame {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      margin: 0 auto 25px;
+      overflow: hidden;
+      background-color: #ffd6e7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
+      color: #ff69b4;
     }
   </style>
 </head>
 <body>
 
-  <h1>Για τη Σηλια 💖</h1>
-  <a class="button" href="https://youtu.be/8Pc0AEbfnBM?si=Funu25GtUFYreOYe" target="_blank">Κανε click 💮</a>
+  <!-- Animated flowers -->
+  <div class="flower" style="top: 10%; left: 10%; animation-delay: 0s;">🌸</div>
+  <div class="flower" style="top: 20%; right: 15%; animation-delay: 1s;">🌹</div>
+  <div class="flower" style="bottom: 15%; left: 20%; animation-delay: 2s;">🌼</div>
+  <div class="flower" style="bottom: 25%; right: 10%; animation-delay: 3s;">💮</div>
+  <div class="flower" style="top: 30%; left: 25%; animation-delay: 4s;">🌺</div>
+
+  <div class="container">
+    <div class="photo-frame">💖</div>
+    <h1>Για τη Σηλια</h1>
+    <p class="message">Με μια απλή κλίκ, ανοίγει μια πόρτα σε έναν κόσμο γεμάτο αγάπη και μουσική που μόνο εσύ μπορείς να γεμίσεις με το χαμόγελο σου.</p>
+    <a class="button" href="https://youtu.be/8Pc0AEbfnBM?si=Funu25GtUFYreOYe" target="_blank">Κάνε κλικ εδώ 💝</a>
+  </div>
+
+  <script>
+    // Create falling hearts
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+      heart.style.fontSize = Math.random() * 20 + 10 + 'px';
+      document.body.appendChild(heart);
+      
+      setTimeout(() => {
+        heart.remove();
+      }, 4000);
+    }
+    
+    // Create hearts every 300ms
+    setInterval(createHeart, 300);
+    
+    // Special effect when button is clicked
+    document.querySelector('.button').addEventListener('click', function() {
+      for(let i = 0; i < 50; i++) {
+        setTimeout(() => {
+          const heart = document.createElement('div');
+          heart.className = 'heart';
+          heart.innerHTML = ['❤️', '💖', '💗', '💓', '💞'][Math.floor(Math.random() * 5)];
+          heart.style.left = Math.random() * 100 + 'vw';
+          heart.style.animationDuration = Math.random() * 2 + 1 + 's';
+          heart.style.fontSize = Math.random() * 30 + 20 + 'px';
+          document.body.appendChild(heart);
+          
+          setTimeout(() => {
+            heart.remove();
+          }, 3000);
+        }, i * 100);
+      }
+    });
+  </script>
 
 </body>
 </html>
-
