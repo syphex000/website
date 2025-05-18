@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Για τη Σηλια 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffe6f0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    h1 {
+      color: #ff69b4;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 2.5rem;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      background-color: #ff99cc;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ff66b2;
+    }
+
+    .flower {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background-image: url('https://upload.wikimedia.org/wikipedia/en/0/05/Hello_Kitty_Character.PNG');
+      background-size: cover;
+      animation: pop 0.6s ease-out;
+    }
+
+    @keyframes pop {
+      0% {
+        transform: scale(0.3);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Για τη Σηλια 💖</h1>
+  <button onclick="showFlower()">Κανε click 💮</button>
+
+  <script>
+    function showFlower() {
+      const flower = document.createElement("div");
+      flower.className = "flower";
+      flower.style.top = `${Math.random() * (window.innerHeight - 100)}px`;
+      flower.style.left = `${Math.random() * (window.innerWidth - 100)}px`;
+      document.body.appendChild(flower);
+    }
+  </script>
+
+</body>
+</html>
